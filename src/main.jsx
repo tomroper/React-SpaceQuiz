@@ -22,9 +22,8 @@ class App extends React.Component {
           <div className="branding"><h1 className="sidebarFont">nasa</h1></div>
         </div>
         <div className="quizArea">
-          <Timer/>
+          <Timer secondsRemaining="60"/>
           <Quiz/>
-          <h2>{this.state.testArray.title}</h2>
         </div>
       </div>
     ); //return close
@@ -35,29 +34,49 @@ class App extends React.Component {
 
 class Timer extends React.Component {
 
-  constructor(props) {
-      super(props);
-      this.state = {
-        time: [
-          {seconds: 60}
-        ]
-      }
-  }
+ constructor(props){
+   super(props);
+   this.state = {
+     secondsRemaining: 0
+   }
+ }
 
-  _secondsRemaining(){
-      return(
-        <h1>hello</h1>
-      )
-    }
+ _tick() {
+   this.setState({secondsRemaining: this.state.secondsRemaining - 1});
+   if (this.state.secondsRemaining <= 0) {
+     clearInterval(this.timer);
+   }
+ }
+ _renderMinutes() {
+   let minutes = Math.floor(this.state.secondsRemaining / 60);
+   let seconds = this.state.secondsRemaining % 60;
+   seconds = seconds < 10 ? '0' + seconds : seconds;
 
+   return (<div className="timerBox">{minutes}:{seconds}</div>)
+ }
 
-  render() {
-    return(
-      <h1> Here is the time left {this.state.time.seconds.text} </h1>
+ _startTimer(){
+   console.log(this.props.secondsRemaining);
+ }
 
-    )
-  } //render
-}//Timer
+ componentDidMount() {
+   this.setState({ secondsRemaining: this.props.secondsRemaining });
+   this.timer = setInterval(this._tick.bind(this), 1000);
+ }
+ componentWillUnmount() {
+   clearInterval(this.timer);
+ }
+ render(){
+   return (
+     <div className="startTest">
+         <div className="timer">
+           {this._renderMinutes()}
+         </div>
+         <button onClick={this._startTimer.bind(this)}>Start Test</button>
+      </div>
+   )
+ }
+}
 
 // - - - - - - - - - - - - - New Component - - - - -
 
@@ -71,14 +90,10 @@ class Quiz extends React.Component {
       }
   }
 
-  _secondCount(){
-
-  }
-
   render() {
     return(
 
-      <button onClick={this._secondCount.bind(this)}>Start Test</button>
+      <h1>Quiz Area</h1>
 
     )
   } //render

@@ -76,7 +76,7 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
 	
 	    _this.state = {
-	      //
+	      testArray: [{ title: 'testArrayItem' }]
 	    };
 	    return _this;
 	  }
@@ -104,7 +104,12 @@
 	          'div',
 	          { className: 'quizArea' },
 	          React.createElement(Timer, null),
-	          React.createElement(Quiz, null)
+	          React.createElement(Quiz, null),
+	          React.createElement(
+	            'h2',
+	            null,
+	            this.state.testArray.title
+	          )
 	        )
 	      ); //return close
 	    } //render close
@@ -125,7 +130,7 @@
 	    var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(Timer).call(this, props));
 	
 	    _this2.state = {
-	      time: [{ secondsRemaining: 60 }]
+	      time: [{ seconds: 60 }]
 	    };
 	    return _this2;
 	  }
@@ -133,7 +138,11 @@
 	  _createClass(Timer, [{
 	    key: '_secondsRemaining',
 	    value: function _secondsRemaining() {
-	      return this.state.time.seconds;
+	      return React.createElement(
+	        'h1',
+	        null,
+	        'hello'
+	      );
 	    }
 	  }, {
 	    key: 'render',
@@ -142,7 +151,7 @@
 	        'h1',
 	        null,
 	        ' Here is the time left ',
-	        this._secondsRemaining.bind(this),
+	        this.state.time.seconds.text,
 	        ' '
 	      );
 	    } //render
@@ -169,14 +178,14 @@
 	  }
 	
 	  _createClass(Quiz, [{
-	    key: '_startTimer',
-	    value: function _startTimer() {}
+	    key: '_secondCount',
+	    value: function _secondCount() {}
 	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return React.createElement(
 	        'button',
-	        { onClick: this._startTimer.bind(this) },
+	        { onClick: this._secondCount.bind(this) },
 	        'Start Test'
 	      );
 	    } //render
