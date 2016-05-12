@@ -1,12 +1,58 @@
 
-html, body {
+// The base font size is 16px and it HEX code is #ffffff
+// The body font family is Open Sans Light
+// The HEX code for the button colour is #e2231a
+// The light grey border color is #dbdbdb
+// The medium grey color of the text in the footer is #c2c2c2
+
+$baseFontSize: 16px;
+
+body {
   width: 100vw;
   height: 100vh;
-  background: green;
+  background: #8c413a;
 }
 
 h1 {
-  color: #fff;
   font-family: "Avenir", sans-serif;
   font-size: 2em;
+}
+
+.sidebarFont {
+  color: #edf1f2;
+  font-size: $baseFontSize * 4.5;
+  font-weight: bold;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  text-align: left;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.sidebar {
+  background: #fff;
+  height: 100vh;
+  width: 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.branding {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.quizArea {
+  height: 100vh;
+  width: 92vw;
+  background: #8c413a;
 }

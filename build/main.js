@@ -70,25 +70,121 @@
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 	
-	  function App() {
+	  function App(props) {
 	    _classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
+	
+	    _this.state = {
+	      //
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
 	      return React.createElement(
-	        'h1',
-	        null,
-	        ' Hello Blank TOM React App!'
-	      );
-	    }
+	        'div',
+	        { className: 'wrapper' },
+	        React.createElement(
+	          'div',
+	          { className: 'sidebar' },
+	          React.createElement(
+	            'div',
+	            { className: 'branding' },
+	            React.createElement(
+	              'h1',
+	              { className: 'sidebarFont' },
+	              'nasa'
+	            )
+	          )
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'quizArea' },
+	          React.createElement(Timer, null),
+	          React.createElement(Quiz, null)
+	        )
+	      ); //return close
+	    } //render close
+	
 	  }]);
 	
 	  return App;
-	}(React.Component);
+	}(React.Component); //App close
+	
+	// - - - - - - - - - - - - - New Component - - - - -
+	
+	var Timer = function (_React$Component2) {
+	  _inherits(Timer, _React$Component2);
+	
+	  function Timer(props) {
+	    _classCallCheck(this, Timer);
+	
+	    var _this2 = _possibleConstructorReturn(this, Object.getPrototypeOf(Timer).call(this, props));
+	
+	    _this2.state = {
+	      time: [{ secondsRemaining: 60 }]
+	    };
+	    return _this2;
+	  }
+	
+	  _createClass(Timer, [{
+	    key: '_secondsRemaining',
+	    value: function _secondsRemaining() {
+	      return this.state.time.seconds;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
+	        'h1',
+	        null,
+	        ' Here is the time left ',
+	        this._secondsRemaining.bind(this),
+	        ' '
+	      );
+	    } //render
+	
+	  }]);
+	
+	  return Timer;
+	}(React.Component); //Timer
+	
+	// - - - - - - - - - - - - - New Component - - - - -
+	
+	var Quiz = function (_React$Component3) {
+	  _inherits(Quiz, _React$Component3);
+	
+	  function Quiz(props) {
+	    _classCallCheck(this, Quiz);
+	
+	    var _this3 = _possibleConstructorReturn(this, Object.getPrototypeOf(Quiz).call(this, props));
+	
+	    _this3.state = {
+	      //
+	    };
+	    return _this3;
+	  }
+	
+	  _createClass(Quiz, [{
+	    key: '_startTimer',
+	    value: function _startTimer() {}
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return React.createElement(
+	        'button',
+	        { onClick: this._startTimer.bind(this) },
+	        'Start Test'
+	      );
+	    } //render
+	
+	  }]);
+	
+	  return Quiz;
+	}(React.Component); //Quiz
 	
 	ReactDOM.render(React.createElement(App, null), document.getElementById('react-app'));
 	
@@ -20569,7 +20665,7 @@
 	
 	
 	// module
-	exports.push([module.id, "html, body {\n  width: 100vw;\n  height: 100vh;\n  background: green; }\n", ""]);
+	exports.push([module.id, "body {\n  width: 100vw;\n  height: 100vh;\n  background: #8c413a; }\n\nh1 {\n  font-family: \"Avenir\", sans-serif;\n  font-size: 2em; }\n\n.sidebarFont {\n  color: #edf1f2;\n  font-size: 72px;\n  font-weight: bold;\n  text-transform: uppercase;\n  transform: rotate(-90deg);\n  text-align: left; }\n\n.wrapper {\n  height: 100vh;\n  width: 100vw;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: flex-start; }\n\n.sidebar {\n  background: #fff;\n  height: 100vh;\n  width: 8vw;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-start; }\n\n.branding {\n  height: 200px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end; }\n\n.quizArea {\n  height: 100vh;\n  width: 92vw;\n  background: #8c413a; }\n", ""]);
 	
 	// exports
 
