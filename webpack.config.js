@@ -10,16 +10,20 @@ module.exports = {
         path: path.join(__dirname, 'build/')
     },
     devtool: '#source-map',
+
+
     devServer: {
       watch:true,
       inline: true,
       host: '0.0.0.0',
       port: '3000',
+      stats: { colors: true },
       watchOptions: {
             aggregateTimeout: 300,
-            poll: true
-      }
-    }, 
+            poll: 5000
+    },
+      historyApiFallback: true
+    },
     module: {
          loaders: [
             {
@@ -32,9 +36,10 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
+                exclude: /node_modules/,
                 loaders: ['style', 'css', 'sass']
             },
-            { test: /\.png$/, loader: "url-loader?limit=100000" } 
+            { test: /\.png$/, loader: "url-loader?limit=100000" }
         ]
     },
     resolve: {
