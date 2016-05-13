@@ -18,7 +18,7 @@ export default class Welcome extends React.Component {
   render() {
     return(
 
-      <button onClick={this._loadBeginButton.bind(this)}>Start Test</button>
+      <button onClick={this._loadBeginButton.bind(this)}>Start NASA test</button>
 
     )
   } //render
