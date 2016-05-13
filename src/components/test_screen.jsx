@@ -1,7 +1,8 @@
 import React from 'react';
 import {browserHistory} from 'react-router';
 
-import Timer from './timer'
+import Timer from './timer';
+import Questions from './questions';
 
 export default class TestScreen extends React.Component {
 
@@ -24,11 +25,11 @@ export default class TestScreen extends React.Component {
   render() {
     return(
       <div>
-      <Timer
-       started={this.state.started}
-       stopTimer={this._stopTimer.bind(this)}
-       secondsRemaining="60"/>
-      <h1>Quiz Area</h1>
+        <Questions />
+        <Timer
+         started={this.state.started}
+         stopTimer={this._stopTimer.bind(this)}
+         secondsRemaining="60"/>
       </div>
     )
   } //render
