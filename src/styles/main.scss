@@ -7,6 +7,10 @@
 
 $baseFontSize: 16px;
 
+.hidden {
+  display: none;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -25,6 +29,10 @@ h1 {
   text-transform: uppercase;
   transform: rotate(-90deg);
   text-align: left;
+}
+
+.questionFont {
+  color: #fff;
 }
 
 .wrapper {
@@ -68,4 +76,12 @@ h1 {
   width: 92vw;
   background: url('assets/mars-bkgd.png');
   background-size: cover;
+}
+
+.quizBox{
+  border: 1px solid black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

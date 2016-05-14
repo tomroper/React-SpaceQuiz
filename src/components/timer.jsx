@@ -14,6 +14,7 @@ export default class Timer extends React.Component {
    this.setState({secondsRemaining: this.state.secondsRemaining - 1});
    if (this.state.secondsRemaining <= 0) {
      clearInterval(this.timer);
+     browserHistory.push('/rejected');
    }
  }
  _renderMinutes() {
@@ -22,6 +23,8 @@ export default class Timer extends React.Component {
    seconds = seconds < 10 ? '0' + seconds : seconds;
 
    return (<div className="timerBox">{minutes}:{seconds}</div>)
+
+
  }
 
  _startTimer(){

@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Route, browserHistory, Redirect} from 'react-router';
 
+import Security from './components/security.jsx';
 import Welcome from './components/welcome.jsx';
 import Timer from './components/timer.jsx';
 import TestScreen from './components/test_screen.jsx';
@@ -16,7 +17,8 @@ class App extends React.Component {
   render() {
     return (
       <Router history={browserHistory}>
-       <Redirect from='/' to='/welcome'/>
+       <Redirect from='/' to='/security'/>
+       <Route path='/security' component={Security}/>
        <Route path='/welcome' component={Welcome}/>
        <Route path='/test_screen' component={TestScreen}/>
        <Route path='/accepted' component={Accepted}/>
