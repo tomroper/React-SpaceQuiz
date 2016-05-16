@@ -1,7 +1,6 @@
 import React from 'react';
 import {browserHistory} from 'react-router';
 
-
 export default class Welcome extends React.Component {
 
 
@@ -22,16 +21,16 @@ export default class Welcome extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="uiBox">
 
         {!this.state.clicked ?
-          <div>
+          <div className="secQuesBox">
           <h1 className="questionFont">System initited. {this.props.usersName}, you have Level 1 clearance</h1>
-          <button className="appButtons" onClick={this._loadBeginButton.bind(this)}>Join Mars Colony</button></div>
+          <button className="inputButton" onClick={this._loadBeginButton.bind(this)}>Join Mars Colony</button></div>
            :
-          <div>
-           <h1>To confirm suitability for Mars Colony, test will be run</h1>
-           <button onClick={this._loadTestScreen.bind(this)}>Take Test</button>
+          <div className="secQuesBox">
+           <h1 className="questionFont">To confirm suitability for Mars Colony, test will be run</h1>
+           <button className="inputButton" onClick={this._loadTestScreen.bind(this)}>I agree</button>
           </div> }
 
       </div>

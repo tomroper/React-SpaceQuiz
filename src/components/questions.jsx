@@ -2,8 +2,8 @@ import React from 'react';
 import {browserHistory} from 'react-router';
 
 const questions = [
-  {question: 'question1', answer: '1'},
-  {question: 'this is q2', answer: '2'},
+  {question: 'What is the name of the British landing craft that was deployed to Mars Dec 2003?', answer: 'beagle 2'},
+  {question: 'Is Mars larger or smaller than Earth?', answer: 'smaller'},
   {question: 'What is the airspeed velocity of an unladen swallow?', answer: 'african or european?'}
 ];
 
@@ -23,6 +23,7 @@ export default class Questions extends React.Component {
     e.preventDefault();
 
     let userAnswer = this.refs.answer.value ;
+        userAnswer = userAnswer.toLowerCase();
     let correctAnswer = questions[this.state.qCount].answer;
 
       if(userAnswer === correctAnswer ) {
@@ -45,11 +46,11 @@ export default class Questions extends React.Component {
 
   render() {
     return(
-      <div>
-        <form name="questionForm">
-        <h1> {questions[this.state.qCount].question} </h1>
-        <input type="text" ref="answer" />
-        <button onClick={this._answerSubmitted.bind(this)}>submit</button>
+      <div className="quizBox secQuesBox">
+        <form className="uiBox" name="questionForm">
+        <h1 className="questionFont"> {questions[this.state.qCount].question} </h1>
+        <input className="textBox" type="text" ref="answer" />
+        <button className="inputButton" onClick={this._answerSubmitted.bind(this)}>submit</button>
         </form>
       </div>
     ) //return

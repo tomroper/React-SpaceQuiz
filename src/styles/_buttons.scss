@@ -1,0 +1,12 @@
+.inputButton {
+  display: block;
+  margin-top: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  color: $baseFontColor;
+  font-size: $baseFontSize * 1.5;
+  background: $buttonColor;
+
+}

@@ -17,7 +17,12 @@ export default class Security extends React.Component {
   _nameSubmitted(e) {
     e.preventDefault();
     nameInput = this.refs.userName.value ;
+
+    if (nameInput.length > 1){
     this.setState({ clicked: true});
+    } else {
+      alert('If you want to go to Mars, we need to know your name.')
+    }
     // browserHistory.push('/welcome')
   }
 
@@ -25,12 +30,12 @@ export default class Security extends React.Component {
     return(
       <div className="quizBox">
         {!this.state.clicked ?
-        <div>
-          <h1>Enter your name for security clearance</h1>
-          <form>
-            <input type="text" ref="userName" />
-            <button
-            onClick={this._nameSubmitted.bind(this)}>Submit</button>
+        <div className="uiBox">
+          <h1 className="questionFont">Enter your name for security clearance</h1>
+          <form className="secQuesBox">
+            <input className="textBox" type="text" ref="userName" />
+            <button className="inputButton"
+            onClick={this._nameSubmitted.bind(this)}>Process</button>
           </form>
         </div> :
           <Welcome usersName={`${nameInput}`} /> }

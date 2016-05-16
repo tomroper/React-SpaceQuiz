@@ -1,12 +1,17 @@
 import React from 'react';
 import {browserHistory} from 'react-router';
+var FontAwesome = require('react-fontawesome');
+
 
 export default class Accepted extends React.Component{
 
   render() {
     return(
-    <div>
-    <h1> you got ACCEPTED </h1>
+      <div className="accepted_page">
+        <div className="quizBox secQuesBox">
+        <h1 className="questionFont"> you got ACCEPTED </h1>
+        <FontAwesome name="fa fa-space-shuttle" aria-hidden="true" />
+        </div>
     </div>
   );
   }

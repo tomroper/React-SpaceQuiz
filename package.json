@@ -7,6 +7,8 @@
     "history": "^2.1.1",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
+    "react-font-awesome": "^1.0.3",
+    "react-fontawesome": "^1.1.0",
     "react-router": "^2.4.0"
   },
   "devDependencies": {
@@ -24,6 +26,7 @@
     "punycode": "^1.4.1",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
+    "react-fontawesome": "^1.1.0",
     "sass-loader": "^3.2.0",
     "sockjs-client": "^1.1.0",
     "style-loader": "^0.13.1",

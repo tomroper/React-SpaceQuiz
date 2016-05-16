@@ -1,0 +1,24 @@
+h1 {
+  font-family: $baseFontFamily;
+  font-size: $baseFontSize * 2;
+}
+
+.sidebarFont {
+  color: #edf1f2;
+  font-size: $baseFontSize * 4.5;
+  font-weight: bold;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  text-align: left;
+}
+
+.questionFont {
+  color: $baseFontColor;
+}
+
+.branding {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

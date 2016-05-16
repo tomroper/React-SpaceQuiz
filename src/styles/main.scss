@@ -1,87 +1,21 @@
+@import 'reset';
+@import 'variables';
+//
+@import 'fonts';
+@import 'body';
+@import 'sidebar';
+@import 'boxes';
+@import 'buttons';
 
-// The base font size is 16px and it HEX code is #ffffff
-// The body font family is Open Sans Light
-// The HEX code for the button colour is #e2231a
-// The light grey border color is #dbdbdb
-// The medium grey color of the text in the footer is #c2c2c2
-
-$baseFontSize: 16px;
-
-.hidden {
-  display: none;
+.accepted_page {
+  height: 100Vh;
+  width: 100%;
+  background: rgba(0, 204, 102, 0.5);
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
-  background: #8c413a;
-}
+.rejected_page {
+  height: 100Vh;
+  width: 100%;
+  background: rgba(255, 51, 51, 0.5);
 
-h1 {
-  font-family: "Avenir", sans-serif;
-  font-size: 2em;
-}
-
-.sidebarFont {
-  color: #edf1f2;
-  font-size: $baseFontSize * 4.5;
-  font-weight: bold;
-  text-transform: uppercase;
-  transform: rotate(-90deg);
-  text-align: left;
-}
-
-.questionFont {
-  color: #fff;
-}
-
-.wrapper {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-}
-
-.sidebar {
-  background: #fff;
-  height: 100vh;
-  width: 8vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.branding {
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.timerBox {
-  color: #fff;
-  width: 60px;
-  padding: 10px;
-  border: 2px solid #fff;
-  border-radius: 5px;
-  text-align: center;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.quizArea {
-  height: 100vh;
-  width: 92vw;
-  background: url('assets/mars-bkgd.png');
-  background-size: cover;
-}
-
-.quizBox{
-  border: 1px solid black;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
