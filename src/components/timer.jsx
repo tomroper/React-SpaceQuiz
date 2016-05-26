@@ -23,8 +23,6 @@ export default class Timer extends React.Component {
    seconds = seconds < 10 ? '0' + seconds : seconds;
 
    return (<div className="timerBox">{minutes}:{seconds}</div>)
-
-
  }
 
  _startTimer(){
