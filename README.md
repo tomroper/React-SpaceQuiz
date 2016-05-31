@@ -6,7 +6,7 @@
 http://tom-roper-react.surge.sh/
 
 This Single Page Application is a quiz to see if an applicant is ready to join NASA and head to Mars. 
-Their name is required to begin, otherwise they see and error message.
+Their name is required to begin, otherwise an error message alerts.
 
 The App then moves through 2 confirmation screens and then begins a test. When the test begin a Timer component is trigered and gives the user 60 seconds to complete the quiz. If the user doesnt finish the test in 60 seconds they are rejected. 
 
