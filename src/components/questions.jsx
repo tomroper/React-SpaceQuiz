@@ -46,7 +46,7 @@ export default class Questions extends React.Component {
 
   render() {
     return(
-      <div className="quizBox secQuesBox">
+      <div className="quizBox questionBoxTwo">
         <form className="uiBox" name="questionForm">
         <h1 className="questionFont"> {questions[this.state.qCount].question} </h1>
         <input className="textBox" type="text" ref="answer" />

@@ -24,11 +24,11 @@ export default class Welcome extends React.Component {
       <div className="uiBox">
 
         {!this.state.clicked ?
-          <div className="secQuesBox">
+          <div className="questionBoxTwo">
           <h1 className="questionFont">System initited. {this.props.usersName}, you have Level 1 clearance</h1>
           <button className="inputButton" onClick={this._loadBeginButton.bind(this)}>Join Mars Colony</button></div>
            :
-          <div className="secQuesBox">
+          <div className="questionBoxTwo">
            <h1 className="questionFont">To confirm suitability for Mars Colony, test will be run</h1>
            <button className="inputButton" onClick={this._loadTestScreen.bind(this)}>I agree</button>
           </div> }
