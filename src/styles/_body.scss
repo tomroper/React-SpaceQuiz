@@ -18,3 +18,16 @@ body {
   background: url('assets/mars-bkgd.png');
   background-size: cover;
 }
+
+.acceptedPage {
+  height: 100Vh;
+  width: 100%;
+  background: rgba(0, 204, 102, 0.5);
+}
+
+.rejectedPage {
+  height: 100Vh;
+  width: 100%;
+  background: rgba(255, 51, 51, 0.5);
+
+}

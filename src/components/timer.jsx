@@ -42,8 +42,7 @@ export default class Timer extends React.Component {
          <div className="timer">
            {this._renderMinutes()}
          </div>
-
-      </div>
+    </div>
    )
  }
 }

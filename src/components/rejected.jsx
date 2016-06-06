@@ -19,6 +19,5 @@ export default class Rejected extends React.Component{
   }
 }
 <div>
-<h1> you got Rejected </h1>
-
+  <h1> you got Rejected </h1>
 </div>

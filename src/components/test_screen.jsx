@@ -1,11 +1,9 @@
 import React from 'react';
 import {browserHistory} from 'react-router';
-
 import Timer from './timer';
 import Questions from './questions';
 
 export default class TestScreen extends React.Component {
-
 
   constructor(props) {
       super(props);

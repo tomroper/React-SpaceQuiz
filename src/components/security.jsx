@@ -1,6 +1,5 @@
 import React from 'react';
 import {browserHistory} from 'react-router';
-
 import Welcome from './welcome'
 
 let nameInput = '';
@@ -23,7 +22,6 @@ export default class Security extends React.Component {
     } else {
       alert('If you want to go to Mars, we need to know your name.')
     }
-    // browserHistory.push('/welcome')
   }
 
   render(){
@@ -39,9 +37,7 @@ export default class Security extends React.Component {
           </form>
         </div> :
           <Welcome usersName={`${nameInput}`} /> }
-
-      </div>
+        </div>
     )
-
   }
 }

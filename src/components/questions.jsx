@@ -18,7 +18,6 @@ export default class Questions extends React.Component {
       }
   }
 
-
   _answerSubmitted(e) {
     e.preventDefault();
 
