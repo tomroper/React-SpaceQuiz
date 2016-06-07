@@ -21,7 +21,6 @@ export default class Timer extends React.Component {
    let minutes = Math.floor(this.state.secondsRemaining / 60);
    let seconds = this.state.secondsRemaining % 60;
    seconds = seconds < 10 ? '0' + seconds : seconds;
-
    return (<div className="timerBox">{minutes}:{seconds}</div>)
  }
 

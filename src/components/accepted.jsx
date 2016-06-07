@@ -8,7 +8,7 @@ export default class Accepted extends React.Component{
     return(
       <div className="acceptedPage">
         <div className="quizBox secQuesBox">
-        <h1 className="questionFont"> you got ACCEPTED </h1>
+        <h1 className="questionFont">You got ACCEPTED</h1>
         <FontAwesome name="fa fa-space-shuttle" aria-hidden="true" />
         </div>
     </div>

@@ -124,8 +124,6 @@
 	  return App;
 	}(React.Component); //App close
 	
-	// - - - - - - - - - - - - - New Component - - - - -
-	
 	ReactDOM.render(React.createElement(App, null), document.getElementById('react-app'));
 	
 	//state is the data driving you UI over time
@@ -25968,7 +25966,6 @@
 	      } else {
 	        alert('If you want to go to Mars, we need to know your name.');
 	      }
-	      // browserHistory.push('/welcome')
 	    }
 	  }, {
 	    key: 'render',
@@ -26063,7 +26060,7 @@
 	        { className: 'uiBox' },
 	        !this.state.clicked ? _react2.default.createElement(
 	          'div',
-	          { className: 'secQuesBox' },
+	          { className: 'questionBoxTwo' },
 	          _react2.default.createElement(
 	            'h1',
 	            { className: 'questionFont' },
@@ -26078,7 +26075,7 @@
 	          )
 	        ) : _react2.default.createElement(
 	          'div',
-	          { className: 'secQuesBox' },
+	          { className: 'questionBoxTwo' },
 	          _react2.default.createElement(
 	            'h1',
 	            { className: 'questionFont' },
@@ -26156,7 +26153,6 @@
 	      var minutes = Math.floor(this.state.secondsRemaining / 60);
 	      var seconds = this.state.secondsRemaining % 60;
 	      seconds = seconds < 10 ? '0' + seconds : seconds;
-	
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'timerBox' },
@@ -26337,7 +26333,6 @@
 	      if (userAnswer === correctAnswer) {
 	        numberCorrect++;
 	      }
-	
 	      if (this.state.qCount < questions.length - 1) {
 	        this.setState({ qCount: this.state.qCount + 1 });
 	      } else {
@@ -26347,7 +26342,6 @@
 	          _reactRouter.browserHistory.push('/rejected');
 	        }
 	      }
-	
 	      this.refs.answer.value = '';
 	    }
 	  }, {
@@ -26355,16 +26349,14 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'quizBox secQuesBox' },
+	        { className: 'quizBox questionBoxTwo' },
 	        _react2.default.createElement(
 	          'form',
 	          { className: 'uiBox', name: 'questionForm' },
 	          _react2.default.createElement(
 	            'h1',
 	            { className: 'questionFont' },
-	            ' ',
-	            questions[this.state.qCount].question,
-	            ' '
+	            questions[this.state.qCount].question
 	          ),
 	          _react2.default.createElement('input', { className: 'textBox', type: 'text', ref: 'answer' }),
 	          _react2.default.createElement(
@@ -26426,14 +26418,14 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'accepted_page' },
+	        { className: 'acceptedPage' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'quizBox secQuesBox' },
 	          _react2.default.createElement(
 	            'h1',
 	            { className: 'questionFont' },
-	            ' you got ACCEPTED '
+	            'You got ACCEPTED'
 	          ),
 	          _react2.default.createElement(FontAwesome, { name: 'fa fa-space-shuttle', 'aria-hidden': 'true' })
 	        )
@@ -26611,7 +26603,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'rejected_page' },
+	        { className: 'rejectedPage' },
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'quizBox  secQuesBox' },
@@ -27028,7 +27020,7 @@
 	
 	
 	// module
-	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nh1 {\n  font-family: \"Open Sans\", sans-serif;\n  font-size: 32px; }\n\n.sidebarFont {\n  color: #edf1f2;\n  font-size: 72px;\n  font-weight: bold;\n  text-transform: uppercase;\n  transform: rotate(-90deg);\n  text-align: left; }\n\n.questionFont {\n  color: #fff; }\n\n.branding {\n  height: 150px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end; }\n\nbody {\n  width: 100vw;\n  height: 100vh;\n  background: #8c413a; }\n\n.wrapper {\n  height: 100vh;\n  width: 100vw;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: flex-start; }\n\n.quizArea {\n  height: 100vh;\n  width: 92vw;\n  background: url(" + __webpack_require__(243) + ");\n  background-size: cover; }\n\n.sidebar {\n  background: #fff;\n  height: 100vh;\n  width: 8vw;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start; }\n\n.timerBox {\n  color: #fff;\n  font-family: \"Orbitron\", sans-serif;\n  font-size: 24px;\n  width: 60px;\n  padding: 10px;\n  border: 2px solid #fff;\n  border-radius: 5px;\n  text-align: center;\n  position: absolute;\n  top: 12px;\n  right: 10px; }\n\n.quizBox {\n  border: 1px solid black;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.uiBox {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 600px;\n  background: rgba(0, 0, 0, 0.3);\n  padding: 10px;\n  border-radius: 15px; }\n\n.textBox {\n  width: 100%;\n  outline: none;\n  border: none;\n  border-bottom: 3px solid white;\n  height: 40px;\n  background: transparent;\n  text-align: center;\n  color: #fff;\n  font-size: 48px; }\n\n.secQuesBox {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap; }\n\n.inputButton {\n  margin-top: 5px;\n  padding: 10px;\n  border: none;\n  border-radius: 10px;\n  outline: none;\n  color: #fff;\n  font-size: 24px;\n  background: #e2231a; }\n\n.accepted_page {\n  height: 100Vh;\n  width: 100%;\n  background: rgba(0, 204, 102, 0.5); }\n\n.rejected_page {\n  height: 100Vh;\n  width: 100%;\n  background: rgba(255, 51, 51, 0.5); }\n", ""]);
+	exports.push([module.id, "/* http://meyerweb.com/eric/tools/css/reset/\n   v2.0 | 20110126\n   License: none (public domain)\n*/\nhtml, body, div, span, applet, object, iframe,\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\na, abbr, acronym, address, big, cite, code,\ndel, dfn, em, img, ins, kbd, q, s, samp,\nsmall, strike, strong, sub, sup, tt, var,\nb, u, i, center,\ndl, dt, dd, ol, ul, li,\nfieldset, form, label, legend,\ntable, caption, tbody, tfoot, thead, tr, th, td,\narticle, aside, canvas, details, embed,\nfigure, figcaption, footer, header, hgroup,\nmenu, nav, output, ruby, section, summary,\ntime, mark, audio, video {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline; }\n\n/* HTML5 display-role reset for older browsers */\narticle, aside, details, figcaption, figure,\nfooter, header, hgroup, menu, nav, section {\n  display: block; }\n\nbody {\n  line-height: 1; }\n\nol, ul {\n  list-style: none; }\n\nblockquote, q {\n  quotes: none; }\n\nblockquote:before, blockquote:after,\nq:before, q:after {\n  content: '';\n  content: none; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0; }\n\nh1 {\n  font-family: \"Open Sans\", sans-serif;\n  font-size: 32px; }\n\n.sidebarFont {\n  color: #edf1f2;\n  font-size: 72px;\n  font-weight: bold;\n  text-transform: uppercase;\n  transform: rotate(-90deg);\n  text-align: left; }\n\n.questionFont {\n  color: #fff; }\n\n.branding {\n  height: 150px;\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end; }\n\nbody {\n  width: 100vw;\n  height: 100vh;\n  background: #8c413a; }\n\n.wrapper {\n  height: 100vh;\n  width: 100vw;\n  display: flex;\n  flex-wrap: nowrap;\n  justify-content: flex-start; }\n\n.quizArea {\n  height: 100vh;\n  width: 92vw;\n  background: url(" + __webpack_require__(243) + ");\n  background-size: cover; }\n\n.acceptedPage {\n  height: 100Vh;\n  width: 100%;\n  background: rgba(0, 204, 102, 0.5); }\n\n.rejectedPage {\n  height: 100Vh;\n  width: 100%;\n  background: rgba(255, 51, 51, 0.5); }\n\n.sidebar {\n  background: #fff;\n  height: 100vh;\n  width: 8vw;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start; }\n\n.timerBox {\n  color: #fff;\n  font-family: \"Orbitron\", sans-serif;\n  font-size: 24px;\n  width: 60px;\n  padding: 10px;\n  border: 2px solid #fff;\n  border-radius: 5px;\n  text-align: center;\n  position: absolute;\n  top: 12px;\n  right: 10px; }\n\n.quizBox {\n  border: 1px solid black;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.uiBox {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 600px;\n  background: rgba(0, 0, 0, 0.3);\n  padding: 10px;\n  border-radius: 15px; }\n\n.textBox {\n  width: 100%;\n  outline: none;\n  border: none;\n  border-bottom: 3px solid white;\n  height: 40px;\n  background: transparent;\n  text-align: center;\n  color: #fff;\n  font-size: 48px; }\n\n.questionBoxTwo {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap; }\n\n.inputButton {\n  margin-top: 5px;\n  padding: 10px;\n  border: none;\n  border-radius: 10px;\n  outline: none;\n  color: #fff;\n  font-size: 24px;\n  background: #e2231a; }\n", ""]);
 	
 	// exports
 

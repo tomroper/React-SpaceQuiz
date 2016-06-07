@@ -28,7 +28,6 @@ export default class Questions extends React.Component {
       if(userAnswer === correctAnswer ) {
         numberCorrect ++
       }
-
       if (this.state.qCount < questions.length -1){
         this.setState({ qCount: this.state.qCount + 1})
       } else {
@@ -38,16 +37,14 @@ export default class Questions extends React.Component {
           browserHistory.push('/rejected')
         }
       }
-
       this.refs.answer.value = '';
-
   }
 
   render() {
     return(
       <div className="quizBox questionBoxTwo">
         <form className="uiBox" name="questionForm">
-        <h1 className="questionFont"> {questions[this.state.qCount].question} </h1>
+        <h1 className="questionFont">{questions[this.state.qCount].question}</h1>
         <input className="textBox" type="text" ref="answer" />
         <button className="inputButton" onClick={this._answerSubmitted.bind(this)}>submit</button>
         </form>

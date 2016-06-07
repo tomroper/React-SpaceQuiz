@@ -15,7 +15,6 @@ export default class TestScreen extends React.Component {
   _startTimer() {
     this.setState({started: true})
   }
-
   _stopTimer() {
     this.setState({started: false})
   }
